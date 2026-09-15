@@ -1,0 +1,694 @@
+<!--
+  ============================================================
+  Coaching School SELF! ｜ 販売LP
+  9 Characters Psychology Coaching School
+  ------------------------------------------------------------
+  ・1ページ完結 / モバイル最優先 / レスポンシブ
+  ・静的サイト（Cloudflare Pages でそのまま公開可能）
+  ・文章・画像を差し替えやすいよう、各セクションを
+    <section id="..."> で区切り、コメントを付けています。
+  ------------------------------------------------------------
+  差し替えメモ：
+  - ヘッダー画像 : /assets/images/header-1.png ・ header-2.png（3秒ごとに切替）
+  - 申込リンク   : class="apply-link" のボタン（計3か所）の href を変更
+                   現在: https://belovedcareer.stores.jp/?category_id=69b9e173ff407eac9068d73d
+  - 素材写真     : /assets/images/photo-*.jpg、校長写真 principal.png
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>Coaching School SELF!｜9キャラ心理学×セルフコーチング</title>
+  <meta name="description" content="9キャラ心理学を使ったセルフコーチングを6ヶ月かけて学び、自分を知り、自分を整え、自分らしく生きる力を身につけるオンラインコーチングスクールSELF!" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- ===== OGP（SNSシェア用） ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Coaching School SELF!｜9キャラ心理学×セルフコーチング" />
+  <meta property="og:description" content="自分を知って、自分を整えて、自分の人生を自分で選べる私へ。9キャラ心理学×セルフコーチングを学ぶ6ヶ月のオンラインスクール。" />
+  <meta property="og:image" content="/assets/images/header-1.png" />
+  <meta property="og:site_name" content="Coaching School SELF!" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coaching School SELF!｜9キャラ心理学×セルフコーチング" />
+  <meta name="twitter:description" content="自分を知って、自分を整えて、自分の人生を自分で選べる私へ。" />
+  <meta name="twitter:image" content="/assets/images/header-1.png" />
+
+  <!-- ===== Google Fonts =====
+       本文 : Zen Kaku Gothic New（やわらかいゴシック）
+       見出し: Zen Maru Gothic（丸みのあるゴシック）
+       英字  : Cormorant Garamond / Playfair Display（上品なSerif） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================= 背景のオーロラ光（ページ全体でゆっくり動く） ================= -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob aurora__blob--pink"></span>
+    <span class="aurora__blob aurora__blob--lavender"></span>
+    <span class="aurora__blob aurora__blob--mint"></span>
+    <span class="aurora__blob aurora__blob--blue"></span>
+  </div>
+
+  <!-- ============================================================
+       ファーストビュー（ヒーロー）
+       ------------------------------------------------------------
+       ヘッダー画像（header-1/2.png）が「SELF!」ロゴ・タグラインを
+       含むため、下のコピーは重複を避けて最小限にしています。
+       ============================================================ -->
+  <header class="hero" id="top">
+    <!-- SEO/アクセシビリティ用の見出し（画像がロゴを担うため視覚的には非表示） -->
+    <h1 class="sr-only">Coaching School SELF! ｜ 9キャラ心理学 × セルフコーチング</h1>
+
+    <!-- ヘッダー画像（横いっぱい・角丸なし）。2枚を3秒ごとにふわっと入れ替え。
+         画像を差し替える場合：/assets/images/header-1.png ・ header-2.png -->
+    <div class="hero__slideshow">
+      <img src="/assets/images/header-1.png" alt="Coaching School SELF! ― 9キャラ心理学 × セルフコーチング／自分を生きる。自分を活かす。" class="hero__slide is-active" />
+      <img src="/assets/images/header-2.png" alt="" class="hero__slide" />
+    </div>
+
+    <div class="hero__copy container container--narrow reveal">
+      <!-- ① 目立たせる見出しブロック -->
+      <p class="hero__school">セルフコーチングスクール <span class="hero__self">SELF!</span></p>
+      <p class="hero__badge">第1期生募集スタート</p>
+
+      <!-- ② 説明 -->
+      <p class="hero__sub">
+        習いごと感覚で、<br class="sp-only" />人生レベルの学びを身につける6ヶ月。
+      </p>
+
+      <!-- ③ お申込み期間 -->
+      <p class="hero__period">お申込み期間　<strong>9月19日(土) 〜 9月30日(水)</strong></p>
+
+      <div class="hero__cta">
+        <!-- 申込リンク（本番URL）。差し替える場合はページ内の apply-link を検索 -->
+        <a href="https://belovedcareer.stores.jp/?category_id=69b9e173ff407eac9068d73d" class="btn btn--primary apply-link" target="_blank" rel="noopener">受講申込みはこちら</a>
+        <a href="#introduction" class="btn btn--ghost">SELF!について詳しく</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         01 INTRODUCTION
+         ============================================================ -->
+    <section class="section section--intro" id="introduction">
+      <div class="container container--narrow reveal">
+        <p class="eyebrow">Welcome to SELF!</p>
+        <h2 class="section__title">
+          自分のことなのに、<br />
+          自分のことが一番わからない。
+        </h2>
+
+        <div class="prose">
+          <p>
+            人の気持ちは考えられる。<br />
+            やるべきこともわかっている。
+          </p>
+          <p>だけど、</p>
+          <p class="prose__quote">
+            「私は本当はどうしたい？」<br />
+            「どうしてこんなに苦しいんだろう？」<br />
+            「どうすればもっと自分らしく生きられる？」
+          </p>
+          <p>
+            そんな自分自身のことになると、<br />
+            急に答えがわからなくなることがあります。
+          </p>
+          <p>
+            SELF!は、<br />
+            誰かになるためのスクールではありません。
+          </p>
+          <p class="prose__emphasis">
+            自分を知り、<br />
+            自分を扱い、<br />
+            自分で自分を支えられるようになるための<br />
+            6ヶ月間のコーチングスクールです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 WHAT IS SELF?
+         ============================================================ -->
+    <section class="section section--soft" id="about">
+      <div class="container reveal">
+        <p class="eyebrow">What is SELF?</p>
+        <h2 class="section__title section__title--center">SELF!とは？</h2>
+
+        <div class="prose prose--center">
+          <p>
+            9キャラ心理学を使った<br />
+            メンタルコーチング理論を学びながら、
+          </p>
+          <p>
+            知識として「わかる」だけではなく、<br />
+            毎日の生活の中で自分自身に使える<br />
+            セルフコーチングとして体得していく<br />
+            6ヶ月間の連続講座です。
+          </p>
+          <p>
+            月に1回、みんなで学ぶ。<br />
+            その間の1ヶ月で、実際の生活の中で試してみる。<br />
+            また次の講座で学ぶ。
+          </p>
+          <p>そんなふうに、</p>
+          <p class="prose__badge"><span>「学得」から「体得」へ。</span></p>
+          <p>
+            習いごとのように<br />
+            少しずつ自分との付き合い方を身につけていきます。
+          </p>
+        </div>
+
+        <!-- 実際の講座風景（Zoom・掲載許可済み） -->
+        <figure class="section-photo section-photo--wide">
+          <img src="/assets/images/class-zoom.png" alt="オンライン（Zoom）で集まって学ぶ受講生のみなさん" loading="lazy" />
+          <figcaption>全回オンライン（Zoom）開催。毎月、みんなで学びます。</figcaption>
+        </figure>
+
+        <!-- 3つのパステル円（重なり合うベン図風） -->
+        <div class="venn" aria-hidden="false">
+          <div class="venn__circle venn__circle--pink">
+            <span>自分を<br />責めない心</span>
+          </div>
+          <div class="venn__circle venn__circle--mint">
+            <span>自分を<br />扱う力</span>
+          </div>
+          <div class="venn__circle venn__circle--lavender">
+            <span>自分を<br />生きる選択</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 FOR YOU
+         ============================================================ -->
+    <section class="section" id="for-you">
+      <div class="container reveal">
+        <p class="eyebrow">For You</p>
+        <h2 class="section__title section__title--center">こんな方へ</h2>
+
+        <ul class="checklist">
+          <li class="checklist__item">感情に振り回されて、疲れてしまう</li>
+          <li class="checklist__item">頭ではわかっているのに、行動できない</li>
+          <li class="checklist__item">人を優先しすぎて、自分の気持ちがわからなくなる</li>
+          <li class="checklist__item">自分へのダメ出しが、やめられない</li>
+          <li class="checklist__item">やりたいことを、自分らしく叶えたい</li>
+        </ul>
+
+        <!-- 受講で待っている未来（悩み → 変化） -->
+        <div class="future">
+          <figure class="future__photo">
+            <img src="/assets/images/photo-seminar.jpg" alt="スマートフォンを手に、明るい表情で学ぶ女性" loading="lazy" />
+          </figure>
+
+          <h3 class="future__title">SELF!受講で待っている未来</h3>
+
+          <ul class="future__list">
+            <li>感情に振り回されず、<strong class="mark">自分で気持ちを整えられる</strong>私へ</li>
+            <li>「わかる」が<strong class="mark">「できる」に変わり、軽やかに動ける</strong>私へ</li>
+            <li>人も自分も大切にしながら、<strong class="mark">自分の本音を選べる</strong>私へ</li>
+            <li>ダメ出しをやめ、<strong class="mark">自分にやさしく声をかけられる</strong>私へ</li>
+            <li>やりたいことを、<strong class="mark">自分らしいペースで叶えていける</strong>私へ</li>
+          </ul>
+        </div>
+
+        <p class="pull-quote">
+          「答えを教えてもらう」のではなく<br />
+          <strong>「自分の答えを見つけられる私」へ。</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03.5 VOICES（受講生の変化・左右スライダー）
+         ------------------------------------------------------------
+         ・カードは横スクロール＋スナップで左右スワイプ可能
+         ・PCでは前後の矢印ボタンを表示、下部にドットインジケーター
+         ・文章の差し替えは各 <article class="card voice-slide"> 内で
+         ・重要な変化の一文は <strong class="mark"> でマーカー表示
+         ============================================================ -->
+    <section class="section" id="voices">
+      <div class="container reveal">
+        <p class="eyebrow">Real Voices</p>
+        <h2 class="section__title section__title--center">受講生の変化</h2>
+        <p class="voices__hint">← 左右にスライドして読めます →</p>
+
+        <div class="voices">
+          <button class="voices__arrow voices__arrow--prev" type="button" aria-label="前の声へ">‹</button>
+
+          <div class="voices__track" id="voicesTrack">
+
+            <article class="card voice-slide">
+              <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__text">
+                以前は「やろう」と決めても、一人だとなかなか続かず、いつの間にか元通りに戻ってしまうことがよくありました。SELF!では毎月一度、自分と向き合って目標を立て、試して、また振り返る。その時間を重ねるうちに、<strong class="mark">「決めて終わり」ではなく、自分の状態を見ながら次の一歩を選べる</strong>ようになりました。一人で頑張り続けなくても、少しずつ前へ進めると実感できた6ヶ月でした。
+              </p>
+              <p class="voice__name">Sさん</p>
+            </article>
+
+            <article class="card voice-slide">
+              <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__text">
+                「怖い」と感じる目標を、どう捉えて、どう修正すればいいのかを学べたことが嬉しかったです。以前は、怖さに気づかないまま、なぜか進めない時がありました。今は<strong class="mark">「あ、これは怖いんだ」と気づいて、対策を考えられる</strong>。それが、いろんな意味で自分の大きな力になっています。
+              </p>
+              <p class="voice__name">Kさん</p>
+            </article>
+
+            <article class="card voice-slide">
+              <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__text">
+                受講前は焦りや不安から背伸びをして、ハードルの高い目標ばかり立て、「ちゃんとしなきゃ」と思うほど体が動かず、心と体がチグハグでした。学ぶうちに自己受容が進み、等身大の自分が「できること」から動けるように。<strong class="mark">自分を責めることが減り、周りと比べず、心から安心して動ける</strong>ようになりました。
+              </p>
+              <p class="voice__name">Oさん</p>
+            </article>
+
+            <article class="card voice-slide">
+              <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__text">
+                受講前は継続が苦手で、目標を決めた瞬間はやる気に満ちても、すぐに熱が冷めてしまう自分が嫌でした。学んで気づいたのは、<strong class="mark">そもそも目標設定が、自分に合っていなかった</strong>こと。頭だけで考えた目標だったんです。今は体の感覚も意識して設定し、コツコツ前へ。できない時も責めず、「どこで引っかかってる?」と未来に目を向けられるようになりました。
+              </p>
+              <p class="voice__name">Aさん</p>
+            </article>
+
+            <article class="card voice-slide">
+              <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__text">
+                「こうしたい」と思っても一人では続かず、気づけば元の自分に戻ってしまう——その繰り返しでした。SELF!で毎月立ち止まり、決めて、やってみて、振り返る時間を重ねるうちに、続かなかったことが少しずつ続くように。大きな達成というより、<strong class="mark">自分を見ながら、次の一歩を決め続けられる</strong>ことが一番の変化です。定期的に自分と向き合えば前へ進めると実感しています。
+              </p>
+              <p class="voice__name">Mさん</p>
+            </article>
+
+          </div>
+
+          <button class="voices__arrow voices__arrow--next" type="button" aria-label="次の声へ">›</button>
+
+          <div class="voices__dots" id="voicesDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 6 MONTH PROGRAM（縦タイムライン）
+         ============================================================ -->
+    <section class="section section--soft" id="program">
+      <div class="container reveal">
+        <p class="eyebrow">6 Month Program</p>
+        <h2 class="section__title section__title--center">
+          6ヶ月で、<br />
+          自分との付き合い方を学ぶ。
+        </h2>
+
+        <!-- 第1期スケジュール／クラスの仕組み -->
+        <p class="program-cohort">1st Cohort ｜ 第1期スケジュール</p>
+
+        <div class="program-notes">
+          <p class="program-notes__lead">
+            金曜クラス・土曜クラスの<br class="sp-only" />どちらかにご出席いただきます。
+          </p>
+          <ul>
+            <li>その月によって 金曜⇄土曜 を変更してもOK</li>
+            <li>出られない月は、アーカイブ受講＋期日までにレポート提出で「出席」に</li>
+            <li>全6回のご出席で、修了証をお渡しします</li>
+          </ul>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>01</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">OCTOBER</p>
+              <h3 class="timeline__theme">感情パターンを知る</h3>
+              <p class="timeline__date">10月16日(金) 午後<br /><span>or</span><br />10月17日(土) 午前</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>02</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">NOVEMBER</p>
+              <h3 class="timeline__theme">体感覚を掴む</h3>
+              <p class="timeline__date">11月20日(金) 午後<br /><span>or</span><br />11月21日(土) 午前</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>03</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">DECEMBER</p>
+              <h3 class="timeline__theme">境界線と認知の歪み</h3>
+              <p class="timeline__date">12月18日(金) 午後<br /><span>or</span><br />12月19日(土) 午前</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>04</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">JANUARY</p>
+              <h3 class="timeline__theme">行動活性化</h3>
+              <p class="timeline__date">1月22日(金) 午後<br /><span>or</span><br />1月23日(土) 午前</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>05</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">FEBRUARY</p>
+              <h3 class="timeline__theme">セルフコーチング実践</h3>
+              <p class="timeline__date">2月19日(金) 午前<br /><span>or</span><br />2月20日(土) 午前</p>
+              <p class="timeline__note">※ この回は金曜も午前開催です</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"><span>06</span></div>
+            <div class="card timeline__card">
+              <p class="timeline__month">MARCH</p>
+              <h3 class="timeline__theme">継続力とこれから</h3>
+              <p class="timeline__date">3月26日(金) 午後<br /><span>or</span><br />3月27日(土) 午前</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05 LEARNING STYLE（学びの流れ）
+         ============================================================ -->
+    <section class="section" id="learning">
+      <div class="container container--narrow reveal">
+        <p class="eyebrow">Learning Style</p>
+        <h2 class="section__title section__title--center">
+          無理なく続けられる<br />
+          SELF!の学び方
+        </h2>
+
+        <figure class="section-photo section-photo--wide">
+          <img src="/assets/images/photo-journal.jpg" alt="ノートやペン、コーヒーが並ぶジャーナリングの風景" loading="lazy" />
+        </figure>
+
+        <ul class="flow">
+          <li class="flow__step">申込み完了後、ヒアリングシートを提出</li>
+          <li class="flow__step">専用LINEに参加し、在学期間中サポート</li>
+          <li class="flow__step">月1回3時間の講座</li>
+          <li class="flow__step">毎月たのしい宿題＆実践</li>
+          <li class="flow__step">毎週かんたんなプチワーク</li>
+          <li class="flow__step">次の講座へ</li>
+          <li class="flow__step flow__step--goal">「知っている」から「できる」へ</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06 BENEFITS（5つの受講特典）
+         ============================================================ -->
+    <section class="section section--soft" id="benefits">
+      <div class="container reveal">
+        <p class="eyebrow">Benefits</p>
+        <h2 class="section__title section__title--center">
+          6ヶ月の学びを支える<br />
+          5つの受講特典
+        </h2>
+
+        <div class="benefits">
+          <div class="card benefit">
+            <div class="benefit__icon">
+              <!-- ノート -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="26" height="34" rx="3"/><path d="M12 15h-3M12 24h-3M12 33h-3M19 17h13M19 24h13M19 31h9"/></svg>
+            </div>
+            <p class="benefit__no">01</p>
+            <h3 class="benefit__title">オリジナルワークブックプレゼント</h3>
+          </div>
+
+          <div class="card benefit">
+            <div class="benefit__icon">
+              <!-- 吹き出し -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H20l-8 7v-7h-1a3 3 0 0 1-3-3z"/><path d="M16 18h16M16 24h10"/></svg>
+            </div>
+            <p class="benefit__no">02</p>
+            <h3 class="benefit__title">LINEオープンチャットで<br />6ヶ月間サポート</h3>
+          </div>
+
+          <div class="card benefit">
+            <div class="benefit__icon">
+              <!-- 動画 -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="24" rx="4"/><path d="M21 20l8 4-8 4z"/></svg>
+            </div>
+            <p class="benefit__no">03</p>
+            <h3 class="benefit__title">全回アーカイブ配信<br />視聴期限なし</h3>
+          </div>
+
+          <div class="card benefit">
+            <div class="benefit__icon">
+              <!-- 特別講義動画（再生＋きらめき） -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="24" r="14"/><path d="M18 18l9 6-9 6z"/><path d="M38 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <p class="benefit__no">04</p>
+            <h3 class="benefit__title">入学前の特別講義動画</h3>
+          </div>
+
+          <div class="card benefit">
+            <div class="benefit__icon">
+              <!-- ギフト -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="20" width="30" height="20" rx="2"/><path d="M7 20h34v6H7zM24 20v20"/><path d="M24 20s-6-1-8-5c-1.5-3 2-6 4-3 2 2.5 4 8 4 8zM24 20s6-1 8-5c1.5-3-2-6-4-3-2 2.5-4 8-4 8z"/></svg>
+            </div>
+            <p class="benefit__no">05</p>
+            <h3 class="benefit__title">GIFT!（資格取得）コースへ進む方への<br />特別割引</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07 SAFE PLACE（世界観を強く見せるセクション）
+         ============================================================ -->
+    <section class="section section--safe" id="safe">
+      <div class="container container--narrow reveal">
+        <div class="safe__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="star star--1"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>
+          <svg viewBox="0 0 24 24" class="star star--2"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>
+          <svg viewBox="0 0 24 24" class="star star--3"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>
+        </div>
+
+        <p class="eyebrow eyebrow--light">Safe Place</p>
+        <h2 class="section__title section__title--center">
+          誰一人、<br />
+          置いてけぼりにしません。
+        </h2>
+
+        <div class="prose prose--center">
+          <p>
+            SELF!では、<br />
+            「ちゃんとできること」よりも<br />
+            安心して自分を出せることを大切にしています。
+          </p>
+          <p>
+            わからない日があってもいい。<br />
+            できない週があってもいい。<br />
+            お休みする日があってもいい。
+          </p>
+          <p>
+            自分のペースで、<br />
+            何度でも自分に戻ってくれば大丈夫です。
+          </p>
+        </div>
+
+        <p class="safe__message">
+          ようこそ、<br />
+          自分を生きる場所へ。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         08 FLEXIBLE STYLE
+         ============================================================ -->
+    <section class="section" id="style">
+      <div class="container reveal">
+        <p class="eyebrow">Flexible Style</p>
+        <h2 class="section__title section__title--center">暮らしに合わせて参加できます</h2>
+
+        <figure class="section-photo">
+          <img src="/assets/images/photo-parentchild.jpg" alt="お子様と一緒に机に向かう女性" loading="lazy" />
+        </figure>
+
+        <div class="flex-cards">
+          <div class="card flex-card">
+            <h3 class="flex-card__title">平日・土曜</h3>
+            <p>毎月好きな方を選択OK</p>
+          </div>
+          <div class="card flex-card">
+            <h3 class="flex-card__title">お子様連れOK</h3>
+            <p>安心してご参加ください</p>
+          </div>
+          <div class="card flex-card">
+            <h3 class="flex-card__title">お休みの日があってもOK</h3>
+            <p>アーカイブ＋レポートで受講可能</p>
+          </div>
+          <div class="card flex-card">
+            <h3 class="flex-card__title">全回Zoom開催</h3>
+            <p>ご自宅から参加できます</p>
+          </div>
+          <div class="card flex-card flex-card--wide">
+            <h3 class="flex-card__title">LINEオープンチャット</h3>
+            <p>6ヶ月間サポートします</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         09 PRICE
+         ============================================================ -->
+    <section class="section section--soft" id="price">
+      <div class="container reveal">
+        <p class="eyebrow">Price</p>
+        <h2 class="section__title section__title--center">受講料</h2>
+
+        <p class="price-lead">
+          <strong class="mark">習いごと感覚で学び続けられる、お月謝支払いを採用！</strong><br />
+          月謝払いか一括払いのいずれかを選択の上、お支払いください。
+        </p>
+
+        <div class="price-cards">
+          <div class="card price-card">
+            <p class="price-card__label">MONTHLY</p>
+            <p class="price-card__type">月謝払い</p>
+            <p class="price-card__amount"><span class="num">11,500</span>円 <span class="price-card__times">× 6回</span></p>
+          </div>
+
+          <div class="card price-card price-card--featured">
+            <p class="price-card__label">ONE TIME</p>
+            <p class="price-card__type">一括払い</p>
+            <p class="price-card__amount"><span class="num">69,000</span>円</p>
+          </div>
+        </div>
+
+        <p class="price-note">※ 月謝支払いスタート後、後から残額の一括支払いへの変更は対応致しかねます。</p>
+
+        <div class="cta-center">
+          <a href="https://belovedcareer.stores.jp/?category_id=69b9e173ff407eac9068d73d" class="btn btn--primary btn--large apply-link" target="_blank" rel="noopener">受講申込みはこちら</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         10 INFORMATION
+         ============================================================ -->
+    <section class="section" id="information">
+      <div class="container container--narrow reveal">
+        <p class="eyebrow">Information</p>
+        <h2 class="section__title section__title--center">受講にあたりまして</h2>
+        <p class="info-please"><strong class="mark">必ずお読みください</strong></p>
+
+        <ul class="info-list">
+          <li>女性限定です</li>
+          <li>お子様連れ大歓迎です</li>
+          <li><strong>グループに分かれてのワークタイムがあるため、顔出し＆声出し必須</strong>となります</li>
+          <li>申込み完了後、順次ヒアリングシートをメールにてお届けします<br /><span class="info-list__sub">期限までにご提出をお願いいたします</span></li>
+          <li>お休みの日があっても大丈夫です<br /><span class="info-list__sub">アーカイブ受講＋レポート提出をお願いします</span></li>
+          <li>LINEオープンチャットにて6ヶ月間サポートします</li>
+          <li>Zoom招待等のご連絡もLINEを介して行います</li>
+          <li>10月に入りましたら、お申し込みメールアドレス宛にLINEオープンチャットへの招待をお送りします</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         11 CANCELLATION（注意事項・薄いグレー背景）
+         ============================================================ -->
+    <section class="section section--note" id="cancellation">
+      <div class="container container--narrow reveal">
+        <h2 class="section__title section__title--small section__title--center">退会について</h2>
+        <div class="note-box">
+          <p>
+            退会手数料として<br />
+            次月分のお月謝と同額 11,500円を<br />
+            お支払いいただきます。
+          </p>
+          <p>
+            一括支払い済みの方は、<br />
+            退会手数料を差し引いた金額を返金します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         11.5 PRINCIPAL MESSAGE（校長からのメッセージ）
+         ------------------------------------------------------------
+         写真の差し替え：/assets/images/principal.png
+         ============================================================ -->
+    <section class="section section--soft" id="principal">
+      <div class="container reveal">
+        <p class="eyebrow">Message</p>
+        <h2 class="section__title section__title--center">SELF!校長からのメッセージ</h2>
+
+        <div class="principal">
+          <figure class="principal__photo">
+            <img src="/assets/images/principal.png" alt="SELF!校長 ほし乃ゆかり" loading="lazy" />
+          </figure>
+
+          <div class="principal__body">
+            <p class="principal__text">
+              私が目指しているのは、<br />
+              <strong class="mark">「一家に一人、メンタルコーチがいる社会」</strong>です。
+            </p>
+            <p class="principal__text">
+              そのためにまずは、自分が自分の心を知り、ケアし、励まし、立て直せるようになること。
+            </p>
+            <p class="principal__text">
+              <strong>自分のために学んだことが、いつか大切な人を支える力になる。</strong>
+            </p>
+            <p class="principal__text">
+              SELF!で、その一歩を一緒に始めましょう。
+            </p>
+            <p class="principal__sign">
+              セルフキャラ育成協会 代表<br />
+              じぶん研究家　<span class="principal__name">ほし乃ゆかり</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         12 FINAL CTA
+         ============================================================ -->
+    <section class="section section--final" id="apply">
+      <div class="container container--narrow reveal">
+        <p class="final__lead">
+          自分を知ることは、<br />
+          自分の人生を<br />
+          自分に返してあげること。
+        </p>
+
+        <p class="final__logo">Coaching School <span>SELF!</span></p>
+
+        <p class="final__tagline">
+          自分を生きる <span class="x">×</span> 自分を活かす<br />
+          6ヶ月を始めませんか？
+        </p>
+
+        <a href="https://belovedcareer.stores.jp/?category_id=69b9e173ff407eac9068d73d" class="btn btn--primary btn--large apply-link" target="_blank" rel="noopener">受講申込みはこちら</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= フッター ================= -->
+  <footer class="footer">
+    <p class="footer__logo">SELF<span>!</span></p>
+    <p class="footer__en">9 Characters Psychology Coaching School</p>
+    <p class="footer__copy">© Coaching School SELF!</p>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
