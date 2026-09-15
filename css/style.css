@@ -1061,6 +1061,72 @@ h1, h2, h3, p { margin: 0; }
 }
 .info-list__sub { color: var(--color-text-soft); font-size: 0.9rem; }
 
+/* --- 10 FAQ（折りたたみ・省スペース） --- */
+.faq {
+  max-width: 640px;
+  margin: 2.6rem auto 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.faq__item {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+/* 質問（クリックで開閉） */
+.faq__q {
+  list-style: none;              /* デフォルトの三角マーカーを消す */
+  cursor: pointer;
+  position: relative;
+  padding: 1.15em 3.2em 1.15em 1.4em;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-heading);
+  line-height: 1.65;
+  transition: color 0.25s ease;
+}
+.faq__q::-webkit-details-marker { display: none; }  /* Safari */
+.faq__q::before {
+  content: "Q.";
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--accent-pink);
+  margin-right: 0.5em;
+}
+/* 右側の開閉インジケーター（開くと回転） */
+.faq__q::after {
+  content: "";
+  position: absolute;
+  right: 1.4em;
+  top: 1.5em;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--accent-lavender);
+  border-bottom: 2px solid var(--accent-lavender);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.faq__item[open] .faq__q::after { transform: rotate(-135deg); }
+.faq__item[open] .faq__q { color: var(--accent-lavender); }
+
+/* 答え */
+.faq__a {
+  margin: 0;
+  padding: 0 1.4em 1.3em;
+  color: var(--color-text);
+  line-height: 1.95;
+  font-size: 0.96rem;
+}
+.faq__a::before {
+  content: "A.";
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--accent-lavender);
+  margin-right: 0.5em;
+}
+
 /* --- 11 Cancellation（注意事項・薄いグレー） --- */
 .section--note { background: #f6f6f8; }
 .note-box {
