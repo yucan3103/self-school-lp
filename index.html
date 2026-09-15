@@ -71,8 +71,11 @@
     <!-- ヘッダー画像（横いっぱい・角丸なし）。2枚を3秒ごとにふわっと入れ替え。
          画像を差し替える場合：/assets/images/header-1.png ・ header-2.png -->
     <div class="hero__slideshow">
-      <img src="/assets/images/header-1.png" alt="Coaching School SELF! ― 9キャラ心理学 × セルフコーチング／自分を生きる。自分を活かす。" class="hero__slide is-active" />
-      <img src="/assets/images/header-2.png" alt="" class="hero__slide" />
+      <!-- スマホ：正方形の2枚を3秒ごとにふわっとクロスフェード -->
+      <img src="/assets/images/header-1.png" alt="Coaching School SELF! ― 9キャラ心理学 × セルフコーチング／自分を生きる。自分を活かす。" class="hero__slide hero__slide--sp is-active" />
+      <img src="/assets/images/header-2.png" alt="" class="hero__slide hero__slide--sp" />
+      <!-- PC：横長バナー1枚（自動で切替表示） -->
+      <img src="/assets/images/header-wide.png" alt="" class="hero__slide hero__slide--pc" />
     </div>
 
     <div class="hero__copy container container--narrow reveal">
@@ -122,7 +125,7 @@
           </p>
           <p>
             そんな自分自身のことになると、<br />
-            急に答えがわからなくなることがあります。
+            <strong class="mark">急に答えがわからなくなる</strong>ことがあります。
           </p>
           <p>
             SELF!は、<br />
@@ -131,7 +134,7 @@
           <p class="prose__emphasis">
             自分を知り、<br />
             自分を扱い、<br />
-            自分で自分を支えられるようになるための<br />
+            <strong class="mark">自分で自分を支えられるようになる</strong>ための<br />
             6ヶ月間のコーチングスクールです。
           </p>
         </div>
@@ -153,8 +156,8 @@
           </p>
           <p>
             知識として「わかる」だけではなく、<br />
-            毎日の生活の中で自分自身に使える<br />
-            セルフコーチングとして体得していく<br />
+            <strong class="mark">毎日の生活の中で自分自身に使える<br />
+            セルフコーチングとして体得していく</strong><br />
             6ヶ月間の連続講座です。
           </p>
           <p>
@@ -252,42 +255,47 @@
 
             <article class="card voice-slide">
               <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__headline">「がんばって燃え尽きる」を、卒業</p>
               <p class="voice__text">
-                以前は「やろう」と決めても、一人だとなかなか続かず、いつの間にか元通りに戻ってしまうことがよくありました。SELF!では毎月一度、自分と向き合って目標を立て、試して、また振り返る。その時間を重ねるうちに、<strong class="mark">「決めて終わり」ではなく、自分の状態を見ながら次の一歩を選べる</strong>ようになりました。一人で頑張り続けなくても、少しずつ前へ進めると実感できた6ヶ月でした。
+                SELF!を受ける前の私は、がむしゃらに頑張る→心が折れる…を繰り返し、燃え尽きることが多かったです。SELF!を受講してからは、<strong class="mark">感情や感覚に意識を向けられるようになり、自分のコントロール下に置ける</strong>ようになりました。コーチングスキルだけでなくメンタルハックをたくさん学べて、生きやすくなりました！
               </p>
-              <p class="voice__name">Sさん</p>
+              <p class="voice__name">SAKIさん</p>
             </article>
 
             <article class="card voice-slide">
               <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__headline">「怖い」に気づけたら、動き出せた</p>
               <p class="voice__text">
                 「怖い」と感じる目標を、どう捉えて、どう修正すればいいのかを学べたことが嬉しかったです。以前は、怖さに気づかないまま、なぜか進めない時がありました。今は<strong class="mark">「あ、これは怖いんだ」と気づいて、対策を考えられる</strong>。それが、いろんな意味で自分の大きな力になっています。
               </p>
-              <p class="voice__name">Kさん</p>
+              <p class="voice__name">かのかさん</p>
             </article>
 
             <article class="card voice-slide">
               <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__headline">等身大の私で、安心して動ける</p>
               <p class="voice__text">
                 受講前は焦りや不安から背伸びをして、ハードルの高い目標ばかり立て、「ちゃんとしなきゃ」と思うほど体が動かず、心と体がチグハグでした。学ぶうちに自己受容が進み、等身大の自分が「できること」から動けるように。<strong class="mark">自分を責めることが減り、周りと比べず、心から安心して動ける</strong>ようになりました。
               </p>
-              <p class="voice__name">Oさん</p>
+              <p class="voice__name">おはるさん</p>
             </article>
 
             <article class="card voice-slide">
               <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__headline">目標が“自分サイズ”に変わった</p>
               <p class="voice__text">
                 受講前は継続が苦手で、目標を決めた瞬間はやる気に満ちても、すぐに熱が冷めてしまう自分が嫌でした。学んで気づいたのは、<strong class="mark">そもそも目標設定が、自分に合っていなかった</strong>こと。頭だけで考えた目標だったんです。今は体の感覚も意識して設定し、コツコツ前へ。できない時も責めず、「どこで引っかかってる?」と未来に目を向けられるようになりました。
               </p>
-              <p class="voice__name">Aさん</p>
+              <p class="voice__name">あんなさん</p>
             </article>
 
             <article class="card voice-slide">
               <p class="voice__badge">Before <span>→</span> After</p>
+              <p class="voice__headline">一人だと続かなかったことが、続く</p>
               <p class="voice__text">
                 「こうしたい」と思っても一人では続かず、気づけば元の自分に戻ってしまう——その繰り返しでした。SELF!で毎月立ち止まり、決めて、やってみて、振り返る時間を重ねるうちに、続かなかったことが少しずつ続くように。大きな達成というより、<strong class="mark">自分を見ながら、次の一歩を決め続けられる</strong>ことが一番の変化です。定期的に自分と向き合えば前へ進めると実感しています。
               </p>
-              <p class="voice__name">Mさん</p>
+              <p class="voice__name">みさんりんさん</p>
             </article>
 
           </div>
@@ -370,7 +378,7 @@
             <div class="timeline__marker"><span>06</span></div>
             <div class="card timeline__card">
               <p class="timeline__month">MARCH</p>
-              <h3 class="timeline__theme">継続力とこれから</h3>
+              <h3 class="timeline__theme">継続力を育てる＆卒業式</h3>
               <p class="timeline__date">3月26日(金) 午後<br /><span>or</span><br />3月27日(土) 午前</p>
             </div>
           </li>
@@ -415,6 +423,10 @@
           6ヶ月の学びを支える<br />
           5つの受講特典
         </h2>
+
+        <figure class="section-photo">
+          <img src="/assets/images/workbook.png" alt="SELF!オリジナルワークブックのイメージ" loading="lazy" />
+        </figure>
 
         <div class="benefits">
           <div class="card benefit">
@@ -489,9 +501,16 @@
             安心して自分を出せることを大切にしています。
           </p>
           <p>
+            <strong class="mark">どんなに小さな疑問も、不安も、全部出せる</strong>環境を整えています。
+          </p>
+          <p>
             わからない日があってもいい。<br />
             できない週があってもいい。<br />
             お休みする日があってもいい。
+          </p>
+          <p>
+            お休みが続いてしまっても、<br />
+            <strong class="mark">安心して戻ってこられるよう、個別サポートも万全</strong>です。
           </p>
           <p>
             自分のペースで、<br />
@@ -512,7 +531,7 @@
     <section class="section" id="style">
       <div class="container reveal">
         <p class="eyebrow">Flexible Style</p>
-        <h2 class="section__title section__title--center">暮らしに合わせて参加できます</h2>
+        <h2 class="section__title section__title--center">ライフスタイルに合わせて参加できます</h2>
 
         <figure class="section-photo">
           <img src="/assets/images/photo-parentchild.jpg" alt="お子様と一緒に机に向かう女性" loading="lazy" />
@@ -584,18 +603,17 @@
     <section class="section" id="information">
       <div class="container container--narrow reveal">
         <p class="eyebrow">Information</p>
-        <h2 class="section__title section__title--center">受講にあたりまして</h2>
-        <p class="info-please"><strong class="mark">必ずお読みください</strong></p>
+        <h2 class="section__title section__title--center">ご受講前に必ずお読みください</h2>
 
         <ul class="info-list">
           <li>女性限定です</li>
           <li>お子様連れ大歓迎です</li>
           <li><strong>グループに分かれてのワークタイムがあるため、顔出し＆声出し必須</strong>となります</li>
-          <li>申込み完了後、順次ヒアリングシートをメールにてお届けします<br /><span class="info-list__sub">期限までにご提出をお願いいたします</span></li>
           <li>お休みの日があっても大丈夫です<br /><span class="info-list__sub">アーカイブ受講＋レポート提出をお願いします</span></li>
           <li>LINEオープンチャットにて6ヶ月間サポートします</li>
           <li>Zoom招待等のご連絡もLINEを介して行います</li>
-          <li>10月に入りましたら、お申し込みメールアドレス宛にLINEオープンチャットへの招待をお送りします</li>
+          <li>セルフコーチングは、フラットなメンタルをプラスにするスキルです。そのため<strong class="mark">精神疾患を治療中の方は、心身に負担がかかる可能性があるため受講を推奨いたしません</strong>。主治医にご相談のうえ、ご受講ください</li>
+          <li>10月に入りましたら、お申し込みメールアドレス宛に<strong>事前ヒアリングシート</strong>とLINEオープンチャットへの招待をお送りしますので、ご確認ください</li>
         </ul>
       </div>
     </section>

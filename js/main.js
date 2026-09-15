@@ -118,7 +118,8 @@
 (function () {
   "use strict";
 
-  var slides = document.querySelectorAll(".hero__slide");
+  // スマホ用の正方形スライドのみ切替（PCの横長バナーは静止表示）
+  var slides = document.querySelectorAll(".hero__slide--sp");
   if (slides.length < 2) return;
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
