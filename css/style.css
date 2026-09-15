@@ -1074,6 +1074,14 @@ h1, h2, h3, p { margin: 0; }
   line-height: 2;
 }
 .note-box p + p { margin-top: 1.2rem; }
+/* お得ですよ、の注釈（区切り線つき・読みやすく左寄せ） */
+.note-box__caution {
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--card-border);
+  text-align: left;
+  line-height: 1.95;
+}
 
 /* --- 12 Final CTA --- */
 /* --- 11.5 校長からのメッセージ --- */
