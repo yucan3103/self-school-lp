@@ -1374,3 +1374,132 @@ h1, h2, h3, p { margin: 0; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================================
+   0期生の変化ページ（voices.html）
+   ========================================================================== */
+.grad-hero {
+  position: relative;
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 8vw, 4rem) clamp(1.3rem, 5vw, 2.5rem) clamp(2rem, 6vw, 3rem);
+}
+.grad-back {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin-bottom: 2rem;
+}
+.grad-back:hover { color: var(--accent-lavender); }
+.grad-kicker {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  color: var(--color-heading);
+  margin-top: -0.8rem;
+  margin-bottom: 0.4rem;
+}
+.grad-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 8vw, 2.8rem);
+  color: var(--color-heading);
+  line-height: 1.45;
+  margin: 0.4rem 0 1.9rem;
+}
+.grad-lead { font-size: 1rem; }
+.grad-lead p { margin-bottom: 1.2rem; }
+.grad-note {
+  margin-top: 2.4rem;
+  padding: 1.7rem 1.6rem;
+  text-align: center;
+  line-height: 2;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+.grad-note strong { color: var(--color-heading); font-weight: 700; }
+
+/* Before → After カード */
+.ba-list {
+  display: grid;
+  gap: 1.4rem;
+  margin: 0.5rem auto 0;
+}
+.ba-card { padding: 1.9rem 1.7rem; }
+.ba-card__headline {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-heading);
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+.ba-label {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.28em 1em;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+.ba-block--before .ba-label { color: var(--color-text-soft); background: rgba(120, 120, 160, 0.1); }
+.ba-block--after  .ba-label { color: #fff; background: linear-gradient(120deg, var(--accent-pink), var(--accent-lavender)); }
+.ba-block p { font-size: 0.95rem; line-height: 1.95; color: var(--color-text); }
+.ba-block--before p { color: var(--color-text-soft); }
+.ba-block--after {
+  background: linear-gradient(120deg, rgba(248, 219, 230, 0.22), rgba(229, 220, 246, 0.22) 60%, rgba(216, 239, 227, 0.22));
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+}
+/* Before → After の下向き矢印 */
+.ba-arrow { display: flex; justify-content: center; margin: 0.9rem 0; }
+.ba-arrow::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--accent-lavender);
+  border-bottom: 2px solid var(--accent-lavender);
+  transform: rotate(45deg);
+}
+.ba-card__name {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-size: 0.92rem;
+}
+.ba-card__name::before { content: "— "; color: var(--accent-lavender); }
+
+/* 締めのCTA */
+.grad-cta {
+  text-align: center;
+  max-width: 560px;
+  margin: clamp(3rem, 9vw, 4.5rem) auto clamp(2rem, 6vw, 3rem);
+  padding-inline: 1.3rem;
+}
+.grad-cta > p {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-heading);
+  font-size: clamp(1.15rem, 5vw, 1.4rem);
+  line-height: 1.8;
+  margin-bottom: 1.9rem;
+}
+.grad-cta .btn { display: block; max-width: 340px; margin: 0 auto 1rem; }
+
+/* 本編LP「受講生の変化」内の“もっと見る”導線 */
+.voices__more { margin-top: 2.6rem; }
+.voices__more-lead {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
