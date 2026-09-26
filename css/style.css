@@ -1422,6 +1422,10 @@ h1, h2, h3, p { margin: 0; }
 }
 .grad-note strong { color: var(--color-heading); font-weight: 700; }
 
+/* 0期生ページのZoom集合写真 */
+.grad-photo { margin-inline: auto; }
+.grad-photo--inline { margin-top: 0; }   /* グリッドの gap で間隔を確保 */
+
 /* Before → After カード */
 .ba-list {
   display: grid;
